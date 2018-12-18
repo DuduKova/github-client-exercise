@@ -1,0 +1,13 @@
+<div class="card" *ngIf='user'>
+    <img class="card-img-top" [src]="user.avatar_url" alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">{{ user.login }}</h5>
+        <div class="card-text">
+            <p> name: {{ user.name }}</p>
+            <p *ngIf='user.Organization'> Organization: {{ user.Organization }} </p>
+            <p *ngIf='user.company'> company: {{ user.company }} </p>
+            <p *ngIf='user.location'>location: {{ user.location }}</p>
+            <p [innerHTML]='user.location | map'></p>
+        </div>
+    </div>
+</div>

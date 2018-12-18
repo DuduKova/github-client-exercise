@@ -1,0 +1,7 @@
+<h2>Add user to list </h2>
+<label>ser id: <input #uid></label>
+<button (click)='addUser(uid.value)'>Add user</button>
+<hr>
+<div class="card-columns">
+    <app-user *ngFor='let user of users' [user]='user'></app-user>
+</div>
